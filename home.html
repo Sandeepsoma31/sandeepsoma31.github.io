@@ -18,30 +18,30 @@
             
             <!-- Navigation Bar -->
             <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
+                <a href="#home" class="navlink active-navlink">Home</a>
+                <a href="#about" class="navlink">About</a>
                <!-- <a href="#exp">Edu & Exp</a> -->
-                <a href="#skills">Skills</a>
-                <a href="#project">Projects</a>
-                <a href="#resume" target="_blank">Resume</a>
-                <a href="#contact">Contact</a>
+                <a href="#skills" class="navlink">Skills</a>
+                <a href="#project" class="navlink">Projects</a>
+                <a href="#resume" target="_blank" class="navlink">Resume</a>
+                <a href="#contact" class="navlink">Contact</a>
             </nav>
         </header>
         
         <!-- Home Page -->
-        <section class="home" id="home">
+        <section class="home section" id="home">
             <div class="home-content">
                 <h3>Hello, I am</h3>
                 <h1><span> Sandeep </span></h1>
                 <h3>a Software Engineer <span>@Accenture</span></h3>
                 <p>Tech enthusiatic and hope find my profile good. Thanks.</p>
-                <div class="social-media">
-                    <a href="https://www.google.com/intl/en-US/gmail/about/" title="Gmail" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <!-- <div class="social-media">
+                    <a href="mailto:somasandeep033@gmail.com?subject=From%20Personal%20Website" title="Gmail" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                     <a href="https://in.linkedin.com/in/soma-sandeep-7447341b6" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://leetcode.com/u/somasandeep033/" title="Leetcode" target="_blank"><i class="fa-solid fa-code"></i></a>
                     <a href="https://github.com/Sandeepsoma31" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                </div>
+                   <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div> -->
                <!-- <a href="#" class="btn">View Resume</a> -->
             </div>
             
@@ -51,60 +51,70 @@
         </section>
         
         <!--About Section-->
-        <section class="about" id="about">
+        <section class="about section" id="about">
            <!-- <div class="about-img">
                 <img src="assets/images/prof_pic.jpg" alt="about_img">
             </div> -->
             <div class="about-content">
                 <h2 class="about-heading">About<span>Me</span></h2>
-                <h3>Completed my bachelor's in mechanical engineering in 2022 from Vasavi College of engineering, Hyderabad. currently working as software engineer at Accenture Hyd.</h3>
-                <a href="#exp" class="btn">Read more</a>
+                <h3>Completed my bachelor's in mechanical engineering in 2022 from Vasavi College of engineering, Hyderabad. currently working as software engineer at Accenture Hyd.</h3>  
             </div>
-            
+            <div class="readmore">
+                <!-- <a href="#exp" class="btn">Read more</a> -->
+                <a href="#exp" title="Click to read more"><div class="scroll"><p>Scroll Down<p></div></a>
+            </div>
         </section>
                 
-         <!-- Education Section-->
-        <section class="education" id="education">
+      <!-- Education Section-->
+      <!-- <section class="education" id="education">
             <div class="education-content">
                 <div></div>
-            </div>
-        </section>
+            </div> 
+        </section> -->
         
-        <!-- Experience Section-->
-        <section class="exp" id="exp">
+        <!-- Education and Experience Section-->
+        <section class="exp section" id="exp">
             <div class="tab-titles">
-                <p class="tab-links active-link"><i class="fa-solid fa-user-graduate"></i> Education </p>
-                <p class="tab-links"><i class="fa-solid fa-laptop-file"></i> Experience </p>
+                <p class="tab-links active-link" onclick="openRelatedContent('education')"><i class="fa-solid fa-user-graduate"></i> Education </p>
+                <p class="tab-links" onclick="openRelatedContent('experience')"><i class="fa-solid fa-laptop-file"></i> Experience </p>
             </div>
-            <div class="tab-content">
+            <div class="tab-content active-tab" id="education">
                 <li><span><i class="fa-solid fa-graduation-cap"></i> B.E in Mechanical Engineering (2019 - 2022)<br>Grade: 8.33/10 CGPA</span><br>Vasavi College of engineering, Hyderabad</li>
                 <li><span><i class="fa-solid fa-landmark"></i> Diploma (2016 - 2019)<br>Grade: 86.23%</span><br>Parkal Polytechnic, Warangal</li>
                 <li><span><i class="fa-solid fa-school-flag"></i> SSC (2016)<br>Grade: 9/10 GPA</span><br>Warangal, Telangana</li>
             </div>
+            <div class="tab-content" id="experience">
+                <li><span><i class="fa-solid fa-laptop-file"></i> Accenture <br>(Dec,2022 - Present)</span><br>Hyderabad, India</li>
+                <li>Proficient in Java related Development and Testing tools.</li>
+            </div>
         </section>
         
          <!-- Skills Section-->
-        <section class="skills" id="skills">
-            <h1><span>Skills</span> gained by <span>Experience</span> and by <span>Education</span></h1>
+        <section class="skills section" id="skills">
+            <h1><span>Skills</span> gained by <span>Experience</span> and <span>Education</span></h1>
             <div class="skills-content">
-                <div>SE1</div>
-                 <div>SE2</div>
-                <div>SE2</div>
+                <marquee>
+                <div class="skillsScroll">
+                     <h1>HTML</h1>
+                     <h1>CSS</h1>
+                     <h1>JS</h1>
+                </div>
+                </marquee>
             </div>
         </section>
         
         <!-- Projects Section-->
-        <section class="project" id="project">
+        <section class="project section" id="project">
             <div class="project-container">
                 <p>Projects section</p>
             </div>
         </section>
         
         <!-- Contact Section-->
-        <section class="contact" id="contact">
+        <section class="contact section" id="contact">
             <h1>Contact<span>Sandeep</span></h1>
             <div class="contact-content">
-                <form action="#">
+            <!--    <form action="#">
                 <div class="input-box">
                     <input type="text" placeholder="Enter Your Full Name..">
                     <input type="email" placeholder="Enter Your Email id..">
@@ -116,8 +126,17 @@
                 </div>
                 <textarea name="" id="" rows="10" cols="30" placeholder="Leave your message here.."></textarea> 
                 <input type="button" value="Send Message" class="btn">
-                </form>
+                </form> -->
+
+                <div class="social-media">
+                    <a href="mailto:somasandeep033@gmail.com?subject=From%20Personal%20Website" title="Gmail" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://in.linkedin.com/in/soma-sandeep-7447341b6" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://leetcode.com/u/somasandeep033/" title="Leetcode" target="_blank"><i class="fa-solid fa-code"></i></a>
+                    <a href="https://github.com/Sandeepsoma31" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                   <!-- <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a> -->
+                </div>
             </div>
+            
         </section>
         
         <!-- Footer Section-->
