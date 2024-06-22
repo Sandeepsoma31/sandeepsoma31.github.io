@@ -91,6 +91,25 @@ span{
     cursor: pointer;
 }
 
+.waving-hand {
+    animation-name: wave-animation; 
+    animation-duration: 3s;     
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;      
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) } 
+    100% { transform: rotate( 0.0deg) }
+  }
+
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
@@ -130,6 +149,7 @@ span{
 .tab-content li,
 .tab-content li span{
     font-size: 20px;
+    font-weight: 500;
 }
 
 .tab-content{
@@ -145,9 +165,18 @@ span{
 
 .navbar a{
     font-size: 1.7rem;
-    margin-left: 4rem;
+    margin-left: 2.7rem;
     color: var(--text-color);
     font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+.navbar i{
+    justify-content: center;
+    align-items: center;
+    text-align:center;
 }
 
 .navbar .active-navlink:hover,
@@ -158,25 +187,31 @@ span{
     color: var(--text-color);
 }
 
+/*
 .navbar a:hover{
     text-decoration: underline;
 }
+*/
 
 /* Navbar tab line*/
-.navbar.active-navlink::after{
+.navlink::before{
     content: '';
-    width: 0;
-    height: 3px;
-    background: #2C5F2D;
     position: absolute;
+    margin: 10px 0;
+    width: 0%;
+    bottom: 0;
     left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+    height: 2px;
+    transition: all 500ms ease;
+    background-color: white;
+    
+}
+.nav-link.scroll-nav::before{
+    background: royalblue;
 }
 
-.navbar.active-navlink::after{
+.navlink:hover:before{
     width: 100%;
-    color: #2C5F2D;
 }
 
 .home-img{
@@ -218,7 +253,7 @@ span{
     font-size: 2rem;
     color: var(--main-color);
     transition: .5s ease;
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 1.5rem 1.5rem 3rem 0;
 }
 
 .social-media a:hover{
@@ -295,8 +330,8 @@ span{
 }
 
 .contact h1{
-    margin-bottom: 2rem;
-    font-size: 9vh;
+    margin-bottom: 1rem;
+    font-size: 7vh;
     text-align: center;
 }
 
@@ -305,6 +340,13 @@ span{
     margin: 1rem auto;
     margin-bottom: 3rem;
     text-align: center;
+}
+
+.contact-content{
+    display: block;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact form .input-box{
@@ -338,7 +380,7 @@ span{
 }
 
 .footer{
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -349,6 +391,7 @@ span{
 .footer-text{
     font-size: 1.6rem;
     color: var(--bg-color);
+    text-align: center;
 }
 
 .back-to-top{
@@ -373,6 +416,25 @@ span{
 .skills h1{
     font-size: 2rem;
     text-align: center
+}
+
+.skills-container{
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.tech-icons{
+    text-align: center;
+}
+
+.tech-icons p{
+    color: #2C5F2D;
 }
 
 @media(max-width: 1200px){
@@ -459,7 +521,7 @@ span{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-        color: #2C5F2D
+        color: var(--main-color);
     }
     
     .about{
@@ -537,7 +599,7 @@ span{
     }
     & p{
         margin-top: 7rem;
-        color: #2C5F2D;
+        color: var(--main-color);
         font-size: 1rem;
     }
 }
@@ -572,6 +634,25 @@ span{
     display: inline
 }
 
+.scroll-up{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+}
+
+.scroll-up button{
+    border: none;
+    background: white;
+    color: var(--main-color);
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(196, 235, 21, 0.5);
+}
+
+.scroll-up a i{
+    font-size: 14px;
+}
 
 
 
