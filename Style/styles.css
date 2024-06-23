@@ -91,6 +91,20 @@ span{
     cursor: pointer;
 }
 
+span.typingtext{
+    animation: 
+        typing 2s steps(7),
+        cursor .3s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+
+@keyframes typing {
+    from {width: 0} 
+}
+
 .waving-hand {
     animation-name: wave-animation; 
     animation-duration: 3s;     
@@ -193,26 +207,6 @@ span{
 }
 */
 
-/* Navbar tab line*/
-.navlink::before{
-    content: '';
-    position: absolute;
-    margin: 10px 0;
-    width: 0%;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    transition: all 500ms ease;
-    background-color: white;
-    
-}
-.nav-link.scroll-nav::before{
-    background: royalblue;
-}
-
-.navlink:hover:before{
-    width: 100%;
-}
 
 .home-img{
     margin-left: 2.5rem;
@@ -425,8 +419,8 @@ span{
   gap: 30px;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .tech-icons{
@@ -593,6 +587,7 @@ span{
 		border-left: 2px solid #333;
   	    border-bottom: 2px solid #333;
 		transform: rotate(-45deg);
+        
 	}
     &:hover{
          box-shadow: 0 .5rem 1rem #eaff30;
