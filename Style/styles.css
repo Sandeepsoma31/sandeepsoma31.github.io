@@ -388,25 +388,6 @@ span.typingtext{
     text-align: center;
 }
 
-.back-to-top{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1rem;
-    background: #bbfa32;
-    border-radius: 0.8rem;
-    transition: .5s ease;
-}
-
-.back-to-top a:hover{
-    box-shadow: 0 0 3rem #eaff30;
-}
-
-.back-to-top a i{
-    font-size: 2.4rem;
-    color: blue;
-}
-
 .skills h1{
     font-size: 2rem;
     text-align: center
@@ -419,7 +400,7 @@ span.typingtext{
   gap: 30px;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 10px;
 }
 
@@ -625,9 +606,6 @@ span.typingtext{
 
 
 /*  Skills */
-.skillsScroll h1{
-    display: inline
-}
 
 .scroll-up{
     position: fixed;
@@ -637,7 +615,7 @@ span.typingtext{
 
 .scroll-up button{
     border: none;
-    background: white;
+    background: #85f9ff;
     color: var(--main-color);
     height: 3em;
     width: 3em;
