@@ -63,7 +63,9 @@ navalllinks.forEach(currentlink =>{
         document.querySelector('.active-navlink').classList.remove('active-navlink');
         currentlink.classList.add('active-navlink');
     })
-})
+});
+
+//Navigates to choosen section
 
 const sectionalllinks = document.querySelectorAll('.section');
 
@@ -71,7 +73,7 @@ let currentsection = 'home';
 window.addEventListener('scroll',() =>{
 
     sectionalllinks.forEach(presentsection => {
-        if(window.scrollY >= presentsection.offsetTop - presentsection.clientHeight/2){
+        if(window.scrollY >= presentsection.offsetTop - presentsection.clientHeight/4){
             currentsection = presentsection.id;
         }
     })
@@ -84,6 +86,6 @@ window.addEventListener('scroll',() =>{
         }
     })
 
-})
+});
 
 
