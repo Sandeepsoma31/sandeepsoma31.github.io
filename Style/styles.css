@@ -198,15 +198,8 @@ span.typingtext{
   color: var(--main-color);
 }
 .navbar a:hover{
-    color: var(--text-color);
+    color: orange;
 }
-
-/*
-.navbar a:hover{
-    text-decoration: underline;
-}
-*/
-
 
 .home-img{
     margin-left: 2.5rem;
@@ -257,12 +250,11 @@ span.typingtext{
 }
 
 .btn{
-    background: #309dfc;
+    background: #bafb09;
     display: inline-block;
     padding: 0.8rem 2.3rem;
-    border-radius: 4rem;
+    border-radius: 2rem;
     box-shadow: none;
-    color: var(--bg-color);
     font-size: 1.7rem;
     font-weight: 700;
     transition: 0.5s ease;
@@ -275,8 +267,10 @@ span.typingtext{
 
 .btn:hover{
     box-shadow: 0 0 1rem #eaff30;
-    background: #2C5F2D;
+    background: #b9e618;
 }
+
+/*  About */
 
 .about{
     display: inline-block;
@@ -323,9 +317,11 @@ span.typingtext{
      margin-top: 35vh;
 }
 
+/*  Contact */
+
 .contact h1{
     margin-bottom: 1rem;
-    font-size: 7vh;
+    font-size: 3.5rem;
     text-align: center;
 }
 
@@ -388,6 +384,8 @@ span.typingtext{
     text-align: center;
 }
 
+/* Skills */
+
 .skills h1{
     font-size: 2rem;
     text-align: center
@@ -408,8 +406,22 @@ span.typingtext{
     text-align: center;
 }
 
+.tech-icons{
+    border: #fcc912;
+    border-style: solid;
+    border-radius: 20%;
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.tech-icons:hover{
+    transform: scale(1.3);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
 .tech-icons p{
     color: #2C5F2D;
+    text-align:justify;
+    word-wrap: break-word;
 }
 
 @media(max-width: 1200px){
@@ -605,7 +617,7 @@ span.typingtext{
 }
 
 
-/*  Skills */
+/*  Back to Top */
 
 .scroll-up{
     position: fixed;
@@ -615,7 +627,7 @@ span.typingtext{
 
 .scroll-up button{
     border: none;
-    background: #85f9ff;
+    background: #9fc7f5;
     color: var(--main-color);
     height: 3em;
     width: 3em;
@@ -626,6 +638,7 @@ span.typingtext{
 .scroll-up a i{
     font-size: 14px;
 }
+
 
 
 
