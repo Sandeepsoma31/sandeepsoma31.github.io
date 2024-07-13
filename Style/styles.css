@@ -17,6 +17,7 @@
     --snd-bg-color: #59B2F4;
     --text-color: #00B1D2FF;
     --main-color: #2C5F2D;
+    --orange-color: orange;
     
 }
 
@@ -43,6 +44,18 @@ section{
     width: 100%;
     z-index: 100;
     position: fixed;
+}
+
+@media(max-width: 768px){
+    #preload{
+        background-size: 50%;
+    }
+}
+
+@media(max-width: 617px){
+    #preload{
+        background-size: 70%;
+    }
 }
 
 .header{
@@ -151,23 +164,34 @@ span.typingtext{
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    position: relative
+    position: relative;
 }
 
 .tab-links::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #2C5F2D;
+    background: var(--main-color);
     position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.5s;
 }
 
+.tab-links:hover,
+.tab-links.active-link{
+    color: rgb(255, 105, 0);
+}
+
+.tab-links.active-link{
+    font-size: 23px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium'; 
+}
+
 .tab-links.active-link::after{
     width: 100%;
-    color: #2C5F2D;
+    color: var(--main-color)
 }
 
 .tab-content li{
@@ -275,7 +299,7 @@ span.typingtext{
     transition: 0.5s ease;
     letter-spacing: .1rem;
     margin-left: 1rem;
-    border-color: orange;
+    border-color: var(--orange-color);
     border-block-end-style: solid;
     margin-bottom: 0.8rem;
     
@@ -427,7 +451,7 @@ span.typingtext{
 }
 
 .tech-icons{
-    border: #fcc912;
+    border: var(--orange-color);
     border-style: solid;
     border-radius: 20%;
     box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -609,7 +633,7 @@ span.typingtext{
         margin-top: 7rem;
         padding-top: 2px;
         color: var(--main-color);
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 }
