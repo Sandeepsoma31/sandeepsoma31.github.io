@@ -88,4 +88,13 @@ window.addEventListener('scroll',() =>{
 
 });
 
+//Pre loader
+
+var preloader = document.getElementById('preload');
+
+window.addEventListener("load",function(){
+    preloader.style.display = 'none';
+
+});
+
 

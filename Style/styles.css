@@ -35,6 +35,16 @@ section{
     padding: 10rem 9% 2rem;
 }
 
+/* PreLoader of site */
+#preload{
+    background: var(--bg-color) url(/assets/gif/spinner.gif)  no-repeat center;
+    height: 100vh;
+    background-size: 20%;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -73,7 +83,7 @@ section{
 }
 
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .home-content h3:nth-of-type(2){
@@ -105,6 +115,7 @@ span.typingtext{
     from {width: 0} 
 }
 
+/*Waving animation*/
 .waving-hand {
     animation-name: wave-animation; 
     animation-duration: 3s;     
@@ -198,7 +209,7 @@ span.typingtext{
   color: var(--main-color);
 }
 .navbar a:hover{
-    color: orange;
+    color: rgba(255, 102, 0, 0.904);
 }
 
 .home-img{
@@ -627,17 +638,22 @@ span.typingtext{
 
 .scroll-up button{
     border: none;
-    background: #9fc7f5;
+    background-image: linear-gradient(120deg, #f6d365 -50%, #fda085 100%);
     color: var(--main-color);
     height: 3em;
     width: 3em;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(196, 235, 21, 0.5);
+}
+
+.scroll-up button:hover{
+    box-shadow: 0 0 7px red;
 }
 
 .scroll-up a i{
-    font-size: 14px;
+    font-size: 15px;
 }
+
+
 
 
 
