@@ -51,13 +51,14 @@ section{
     left: 0;
     width: 100%;
     height: 50px;
-    padding: 2rem 9% 1rem;
+    padding: 2rem 3% 1rem;
     display: flex;
     background: var(--bg-color);
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
+
 
 #ham-menu{
     font-size: 3.3rem;
@@ -83,7 +84,9 @@ section{
 }
 
 .home-content p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-family: cursive;
+    font-weight: 500;
 }
 
 .home-content h3:nth-of-type(2){
@@ -99,6 +102,7 @@ span{
     color: var(--text-color);
     font-weight: 700;
     cursor: pointer;
+    margin-left: 1rem;
 }
 
 span.typingtext{
@@ -261,7 +265,7 @@ span.typingtext{
 }
 
 .btn{
-    background: #bafb09;
+    background: #DDD0C8;
     display: inline-block;
     padding: 0.8rem 2.3rem;
     border-radius: 2rem;
@@ -271,8 +275,10 @@ span.typingtext{
     transition: 0.5s ease;
     letter-spacing: .1rem;
     margin-left: 1rem;
-    border-color: #eaff30;
+    border-color: orange;
     border-block-end-style: solid;
+    margin-bottom: 0.8rem;
+    
     
 }
 
@@ -284,7 +290,7 @@ span.typingtext{
 /*  About */
 
 .about{
-    display: inline-block;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
@@ -293,9 +299,9 @@ span.typingtext{
 }
 
 .about-img img{
-    width: 25vw;
+    width: 35vw;
     height: 50vh;
-    border-radius: 35%;
+    border-radius: 20%;
 }
 
 .about-heading{
@@ -304,12 +310,15 @@ span.typingtext{
 }
 
 .about-content h2{
+    font-family: Franklin Gothic Medium;
     text-align: left;
     line-height: 1.3;
 }
 
 .about-content h3{
-    font-size: 2.6rem;
+    font-size: 2rem;
+    font-family: cursive;
+    font-weight: 300;
 }
 
 .about-content p{
@@ -325,7 +334,7 @@ span.typingtext{
      max-width: fit-content;
      margin-left: auto;
      margin-right: auto;
-     margin-top: 35vh;
+     margin-top: 7vh;
 }
 
 /*  Contact */
@@ -594,12 +603,14 @@ span.typingtext{
         
 	}
     &:hover{
-         box-shadow: 0 .5rem 1rem #eaff30;
+         box-shadow: 0 .5rem 1rem rgb(241, 190, 3);
     }
     & p{
         margin-top: 7rem;
+        padding-top: 2px;
         color: var(--main-color);
         font-size: 1rem;
+        text-align: center;
     }
 }
 
