@@ -21,9 +21,9 @@ window.onscroll = () =>{
         let id = section.getAttribute('id');
         
         if(top >= offset && top < offset+height){
-            navLinks.forEach.apply(links=>{
+            navLinks.forEach(links=>{
              links.classList.remove('active');
-             document.querySelector('header nav a[href*='+ id +']').classList.add('active');
+             document.querySelector('header .navbar nav a[href*='+ id +']').classList.add('active');
             });  
         };
     });
