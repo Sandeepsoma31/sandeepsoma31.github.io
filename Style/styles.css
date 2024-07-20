@@ -17,8 +17,9 @@
     --snd-bg-color: #59B2F4;
     --text-color: #00B1D2FF;
     --main-color: #2C5F2D;
-    --orange-color: orange;
-
+    --orange-color: #FFA600;
+    --shade-color: #f9fade;
+    --thm-blue: #4070f4;
 }
 
 html {
@@ -27,7 +28,7 @@ html {
 }
 
 body {
-    background: var(--bg-color);
+    background: var(--bg-color) !important;
     color: var(--text-color);
 }
 
@@ -110,6 +111,7 @@ span {
     color: var(--main-color);
 }
 
+/* logo */
 .logo {
     font-size: 2rem;
     color: var(--text-color);
@@ -119,7 +121,7 @@ span {
 }
 
 .logo:hover{
-    color: var(--orange-color);
+    color: rgba(255, 102, 0, 0.845);
 }
 
 /*Waving animation*/
@@ -230,14 +232,54 @@ span {
     margin-right: auto;
 }
 
+@media(max-width: 768px) {
+    .tab-titles {
+        display: flex;
+        margin: 10px 0 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tab-links {
+        margin-right: 17px;
+        font-size: 10px;
+        font-weight: 300;
+        cursor: pointer;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 617px) {
+    .tab-titles {
+        display: flex;
+        margin: 10px 0 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tab-links {
+        margin-right: 13px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .navbar a {
     font-size: 1.7rem;
     margin-left: 2.7rem;
+    margin-bottom: 0.3rem;
     color: var(--text-color);
     font-weight: 700;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .navbar i {
@@ -252,9 +294,26 @@ span {
 }
 
 .navbar a:hover {
-    color: rgba(255, 102, 0, 0.904);
+    color: rgba(255, 102, 0, 0.845);
 }
 
+.navlink:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--thm-blue);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.navlink:hover:after {
+    width: 100%;
+    left: 0;
+}
 .home-img {
     margin-left: 2.5rem;
 }
@@ -263,7 +322,7 @@ span {
     animation: ImageTransition 5s ease-in-out infinite;
     width: 25vw;
     height: 50vh;
-    border-radius: 35%;
+    border-radius: 30%;
 }
 
 @keyframes ImageTransition {
@@ -336,7 +395,7 @@ span {
     justify-content: center;
     gap: 2rem;
     background: var(--snd-bg-color);
-    color: #fcf112;
+    color: var(--bg-color);
 }
 
 .about-img img {
@@ -347,7 +406,7 @@ span {
 
 .about-heading {
     font-size: 4.5rem;
-    text-align: center
+    text-align: center;
 }
 
 .about-content h2 {
@@ -446,10 +505,28 @@ span {
 }
 
 /* Skills */
+.skills{
+    position: relative;
+}
 
-.skills h1 {
+.skills h1,
+.skills span{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.skill-title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid orangered;
+    color: var(--thm-blue);
+}
+
+.skills h3{
+    text-align: center;
     font-size: 2rem;
-    text-align: center
+    font-family:cursive;
+    color: var(--main-color);
 }
 
 .skills-container {
@@ -459,30 +536,29 @@ span {
     gap: 30px;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
-
-.tech-icons {
-    text-align: center;
+    padding: 10px
 }
 
 .tech-icons {
     border: var(--orange-color);
     border-style: solid;
-    border-radius: 20%;
-    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    background: var(--shade-color);
+    padding: 3px;
+    text-align: center;
 }
 
 .tech-icons:hover {
-    transform: scale(1.3);
+    transform: scale(1.03);
     box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 195, 255, 0.589) !important;
 }
 
-.tech-icons p {
-    color: #2C5F2D;
-    text-align: justify;
+.tech-icons h2 {
+    color: var(--main-color);
+    text-align: center;
     word-wrap: break-word;
+    font-size: 13px;
 }
 
 @media(max-width: 1200px) {
@@ -528,7 +604,7 @@ span {
     }
 
     .home {
-        flex-direction: column
+        flex-direction: column;
     }
 
     .home-content {
@@ -544,7 +620,7 @@ span {
     }
 
     .home-img img {
-        width: 70vw;
+        width: 80vw;
         margin-top: 4rem
     }
 
@@ -577,7 +653,7 @@ span {
     }
 
     .about-img img {
-        width: 70vw;
+        width: 80vw;
         margin-top: 4rem
     }
 
@@ -592,6 +668,10 @@ span {
     .project-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .tab-content{
+        margin-top: 5rem;
+    }
 }
 
 @media(max-width: 617px) {
@@ -600,13 +680,17 @@ span {
     }
 
     .home-img img {
-        width: 70vw;
+        width: 75vw;
         margin-top: 8rem
     }
 
     .about-img img {
         width: 70vw;
         margin-top: 4rem
+    }
+
+    .tab-content{
+        margin-top: 4rem;
     }
 }
 
@@ -617,6 +701,10 @@ span {
 
     .contact form .input-box input {
         width: 100%
+    }
+
+    .tab-content{
+        margin-top: 3rem;
     }
 
 }
@@ -652,8 +740,9 @@ span {
     & p {
         margin-top: 7rem;
         padding-top: 2px;
-        color: var(--main-color);
+        color: var(--thm-blue);
         font-size: 1.2rem;
+        font-weight: 700;
         text-align: center;
     }
 }
@@ -716,7 +805,6 @@ span {
 /*Project section*/
 
 .project {
-    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -729,9 +817,11 @@ span {
     border: 1px solid var(--orange-color);
     border-radius: 50%;
     box-shadow: inset -5px 5px 10px var(--orange-color);
-    background: var(--bg-color);
+    background: transparent;
     top: 400px;
-    left: -50px;
+    left: -130px;
+    
+    
 }
 
 .project::after {
@@ -742,22 +832,117 @@ span {
     border: 1px solid var(--orange-color);
     border-radius: 50%;
     box-shadow: inset 5px -5px 10px var(--orange-color);
-    background: var(--bg-color);
-    bottom: 400px;
-    right: -50px;
+    background: transparent;
+    bottom: 900px;
+    right: -130px;
+
 }
 
-.project {
-    background: var(--bg-color);
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
+@media(max-width: 768px) {
+    .project::after{
+        right: 90%;
+    }
+
+    .project::before {
+        left: 90%;
+    }
 }
 
-.project h1 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
+
+.project-content-container{
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.project h1{
     text-align: center;
-    text-transform: uppercase;
+    font-size: 2.7rem;
+    color: #333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10px;
+}
+
+.project-container{
+    display: flex;
+    width: 70vw;
+    margin: auto;
+    border-top: 1px solid orangered;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.project-card{
+    flex-basis: 30%;
+    background: var(--shade-color);
+    margin: 25px 0;
+    padding: 10px 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .125);
+    box-shadow: 0 4px 5px 3px rgba(119,53,136,.459)!important;
+}
+
+.project-card:hover{
+    transform: scale(1.07);
+    box-shadow: 0 4px 5px 4px var(--orange-color)!important;
+
+}
+
+.project-title{
+    color: var(--thm-blue);
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project-card img{
+    width: 100%;
+    height: 180px;
+    transition: .5 ease;
+    padding: 7px 7px;
+    border: 1px solid var(--thm-blue);
+    border-radius: 3%;
+}
+
+.project-description{
+    font-size: 14px;
+    color: var(--main-color);
+    padding: 7px;
+}
+
+.project-btns{
+    display: flex;
+}
+
+.project-btns .btn{
+    margin: 7px;
+    font-size: 14px;
+}
+
+.project-card a{
+    color: blue;
+}
+
+.more-projects{
+    margin: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+
+    .project-content-container{
+        width: 100%;  
+    }
+
+    .project-container{
+       flex-direction: column;
+    }
+
+    .more-projects{
+        margin: 0;
+    }
 }
 
