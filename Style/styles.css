@@ -170,7 +170,7 @@ span {
 
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    margin: 10px 0 25px;
     justify-content: center;
     align-items: center;
 }
@@ -254,7 +254,7 @@ span {
 @media(max-width: 617px) {
     .tab-titles {
         display: flex;
-        margin: 10px 0 20px;
+        margin: 10px 0 40px;
         justify-content: center;
         align-items: center;
     }
@@ -961,4 +961,196 @@ span {
         margin: 0;
     }
 }
+
+/* New UI for exp and edu section */
+.experience-section {
+  background: #ffe066;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.experience-card {
+  margin: 0 auto;
+  max-width: 85vw;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.cmp-title{
+    font-family: "Nunito", sans-serif;
+}
+
+.exp-company {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.exp-role {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: .25rem;
+  color: #444;
+  display: block;
+}
+
+.exp-date, .exp-location {
+  font-size: 1.5rem;
+  color: #555;
+  margin-right: 1.2rem;
+}
+
+.exp-details {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.exp-details li {
+  font-size: 1.5rem;
+  margin-bottom: .7rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width:600px){
+  .experience-card { padding: 1rem; }
+  .exp{
+    margin-bottom: -10vh;
+  }
+}
+
+.tab-content {
+  background: #ffe066; 
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  color: #222;
+  margin-bottom:1.5rem;
+  transition: box-shadow .3s;
+}
+
+.edu-card{
+  margin: 0 auto;
+  max-width: 85vw;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edu-list li {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ffd7001c;
+}
+
+.edu-degree {
+  font-size: 1.13rem;
+  font-weight: 550;
+  color: #213d99;
+  letter-spacing: .03em;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.edu-degree i {
+  font-size: 1.5rem;
+  color: #d6336c;
+}
+
+.edu-years {
+  margin-left: 6px;
+  font-size: 0.97em;
+  color: #444;
+  white-space: nowrap; 
+  display: inline;
+}
+
+.edu-details {
+  font-size: 1.5rem;
+  color: #10639e;
+  margin: .35rem 0 0 2.1rem;
+}
+
+.edu-link {
+  text-decoration: underline;
+  color: #2874a6;
+  transition: color 0.2s;
+}
+
+.edu-link:hover {
+  color: #d6336c;
+}
+
+@media only screen and (max-width: 900px) {
+  .tab-content {
+    padding: 1.4rem 1rem;
+    max-width: 98vw;
+  }
+  .edu-card{
+    margin: 0 auto;
+    max-width: 85vw;
+    padding: 1.5rem;
+  }
+  .edu-degree {
+    font-size: 1.02rem;
+  }
+  .edu-degree i {
+    font-size: 1.5rem;
+  }
+  .edu-years {
+    display: block;
+    margin: 2px 0 0 0; 
+    font-size: 0.90em;
+  }
+  .edu-details {
+    font-size: 1.5rem;
+    margin-left: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tab-content {
+    padding: 0.6rem 0.5rem;
+    border-radius: 9px;
+    max-width: 99vw;
+  }
+  .edu-card{
+    margin: 0 auto;
+    max-width: 85vw;
+    padding: 1.5rem;
+  }
+  .edu-degree {
+    font-size: 0.97rem;
+    gap: .4rem;
+  }
+  .edu-degree i {
+    font-size: 1.5rem;
+  }
+  .edu-years {
+    display: block;
+    margin: 2px 0 0 0;
+    font-size: 0.90em;
+  }
+  .edu-details {
+    font-size: 1.5rem;
+    margin-left: 0.7rem;
+  }
+}
+
+
 
